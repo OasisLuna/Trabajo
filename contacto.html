@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyloRelax</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="contenedor">
+        <div class="barra">
+            <img src="img/Logo.jpg" alt="logo">
+            <nav class="navegacion">
+                    <a href="index.html">Home</a>
+                    <a href="servicios.html">Servicios</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+        </div>
+    </div>
+    <div id="container" class="container-xl mt-5 mb-5">
+        <header>
+            <h1>CONTACTO</h1>
+            <span class="red">Los campos marcados con * son requeridos</span>
+        </header>
+                <!-- INICIO FORMULARIO HTML -->
+            <form method="POST" action="/images/blog/192/formulario-contacto-bootstrap.php" class="needs-validation" novalidate="">
+
+                <div class="form-row mt-5">
+                    <div class="col-md-4 mb-3">
+                        <label for="validarNombre">Nombre:<span class="red">*</span></label>
+                        <input type="text" class="form-control" id="validarNombre" name="validarNombre" required="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validarApellidos">Apellidos:<span class="red">*</span></label>
+                        <input type="text" class="form-control" id="validarApellidos" name="validarApellidos" required="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validarEmail">Email:<span class="red">*</span></label>
+                        <input type="email" class="form-control" id="validarEmail" name="validarEmail" required="">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validarTelefono">Teléfono:</label>
+                        <input type="number" class="form-control" id="validarTelefono" name="validarTelefono" max="9999999999">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validarTema">Tema:<span class="red">*</span></label>
+                        <select class="custom-select" id="validarTema" name="validarTema" required="">
+                            <option selected="" disabled="" value="">Selecciona...</option>
+                            <option value="Turno Peluqueria">Turno Peluqueria</option>
+                            <option value="Turno Manicuria">Turno Manicuria</option>
+                            <option value="Turno Depilación">Turno Depilación</option>
+                            <option value="Otras cuestiones">Otras cuestiones</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                        <label for="validarAsunto">Asunto:</label>
+                        <input type="text" class="form-control" id="validarAsunto" name="validarAsunto" required="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="validationMensaje">Mensaje:<span class="red">*</span></label>
+                    <textarea class="form-control" id="validationMensaje" name="validationMensaje" rows="3" min="25" required=""></textarea>
+                </div>
+
+                <div class="form-group mb-10">
+                    <button class="btn btn-primary" type="submit" name="submit">Enviar</button>
+                    <button class="btn btn-success" type="reset" name="reset">Limpiar</button>
+                </div>
+            </form>
+            <!-- FIN FORMULARIO HTML -->
+            
+    </div>
+
+    <div>
+        <h1>
+            <a href="https://www.facebook.com/Stylo-Relax-120600316476225/?ref=page_internal" target="_blank" rel="noopener noreferrer">
+            <img src="/img/logotipo-facebook.png" alt="logo-facebook" width="200vh"></a>
+            <a href="https://www.instagram.com/peluqueriastylorelax/" target="_blank" rel="noopener noreferrer">
+            <img src="/img/instagram.png" alt="logo-instagram" width="100vh"></a>
+        </h1>
+    </div>   
+    <footer>
+        <nav class="navegacion">
+            <a href="index.html">Home</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </footer>
+    <p>Todos los Derechos Reservados 2020 &copy;</p>
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</body>
+</html>
